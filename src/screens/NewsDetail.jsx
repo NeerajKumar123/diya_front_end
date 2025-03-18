@@ -1,7 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
 const NewsDetail = () => {
-    console.log("NewsDetail====>")
   const location = useLocation();
   const navigate = useNavigate();
   const article = location.state?.article;

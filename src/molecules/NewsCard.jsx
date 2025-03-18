@@ -5,8 +5,7 @@ const NewsCard = ({ article }) => {
     <Link to={'/newsdetail'} state={{ article }} className="block">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow">
         {/* News Image */}
-        <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
-        
+        <img src={article.imageUrl} alt={article.title} className="w-full h-48 object-cover" />
         {/* Content */}
         <div className="p-4">
           <h2 className="text-xl font-bold text-gray-800">{article.title}</h2>

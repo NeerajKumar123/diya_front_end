@@ -6,95 +6,20 @@ import EventCard from "../molecules/EventCard";
 import NewsCard from "../molecules/NewsCard";
 import { useNavigate } from "react-router-dom";
 import bgImage from "../assets/test0.png";
+import {fetchNews, fetchEvents,fetchGallary} from "../services/HttpRequests.jsx"
 
 const Home = () => {
+
+    const [news, setNews] = useState([]);   
+    const [events, setEvents] = useState([]);
+    const [gallaryImages, setGallaryImages] = useState([]);
+
+    useEffect(() => {
+      fetchNews().then(setNews);
+      fetchEvents().then(setEvents);
+      fetchGallary().then(setGallaryImages)
+    }, [])
     const navigate = useNavigate();
-    const newsArticles = [
-        {
-            id: 1,
-            title: "Tech Conference 2025 Announced",
-            description: "The biggest tech conference is coming this year with exciting innovations.",
-            image: "https://yavuzceliker.github.io/sample-images/image-1.jpg",
-            date: "March 17, 2025",
-        },
-        {
-            id: 2,
-            title: "New AI Breakthrough",
-            description: "Scientists have achieved a new milestone in AI and Machine Learning.",
-            image: "https://yavuzceliker.github.io/sample-images/image-2.jpg",
-            date: "March 16, 2025",
-        },
-        {
-            id: 3,
-            title: "Climate Change Updates",
-            description: "Experts warn about the rapid effects of global warming on our environment.",
-            image: "https://yavuzceliker.github.io/sample-images/image-3.jpg",
-            date: "March 15, 2025",
-        },
-        {
-            id: 4,
-            title: "New AI Breakthrough",
-            description: "Scientists have achieved a new milestone in AI and Machine Learning.",
-            image: "https://yavuzceliker.github.io/sample-images/image-4.jpg",
-            date: "March 16, 2025",
-        },
-        {
-            id: 5,
-            title: "Climate Change Updates",
-            description: "Experts warn about the rapid effects of global warming on our environment.",
-            image: "https://yavuzceliker.github.io/sample-images/image-5.jpg",
-            date: "March 15, 2025",
-        },
-    ];
-
-    const events = [
-
-        {
-            id: 1,
-            name: "Tech Meetup 2025",
-            date: "April 10, 2025",
-            time: "10:00 AM",
-            venue: "Tech Hub Auditorium, NY",
-            description: "A gathering of tech enthusiasts to discuss the latest trends in AI and Web3.",
-            organizer: "Tech Community NY",
-            image: "https://yavuzceliker.github.io/sample-images/image-11.jpg",
-            chiefGuest: "Neeraj Parajapati, Amit Parajapati, Ompal Parajapati"
-        },
-        {
-            id: 2,
-            name: "Startup Pitch Fest",
-            date: "April 20, 2025",
-            time: "2:00 PM",
-            venue: "Silicon Valley Startup Hub",
-            description: "Startup founders pitch their ideas to investors and mentors.",
-            organizer: "SV Startup Network",
-            image: "https://yavuzceliker.github.io/sample-images/image-12.jpg",
-            chiefGuest: "Neeraj Parajapati, Amit Parajapati, Ompal Parajapati"
-        },
-        {
-            id: 3,
-            name: "Blockchain Conference",
-            date: "May 5, 2025",
-            time: "9:00 AM",
-            venue: "Grand Expo Center, LA",
-            description: "Exploring the future of blockchain technology and its applications.",
-            organizer: "Blockchain Association",
-            image: "https://yavuzceliker.github.io/sample-images/image-13.jpg",
-            chiefGuest: "Neeraj Parajapati, Amit Parajapati, Ompal Parajapati"
-        }
-    ];
-
-    const gallaryImages = [
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-10.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-11.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-12.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-10.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-11.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-12.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-10.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-11.jpg" },
-        { name: "Plantation at MZN", url: "https://yavuzceliker.github.io/sample-images/image-12.jpg" }
-    ];
 
     const tabs = [{ head: "Our Mission", sub: "Our Goal, Vision & Commitment", colorCode: "#C84869" },
     { head: "Our Events", sub: "Register & Help Make Change", colorCode: "#2A70DE" },
@@ -166,9 +91,9 @@ const Home = () => {
 
             {/* News Section */}
             <section className="w-full py-12">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Latest News</h2>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {newsArticles.map((article) => (
+                <h2 className="text-2xl font-semibold text-gray-900">Latest News</h2>
+                <div className="grid md:grid-cols-3 gap-6 mt-2">
+                    {news.map((article) => (
                         <NewsCard key={article.id} article={article} />
                     ))}
                 </div>
@@ -176,8 +101,8 @@ const Home = () => {
 
             {/* Upcoming Events Section */}
             <section className="w-full py-12">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Upcoming Events</h2>
-                <div className="grid md:grid-cols-3 gap-6 flex-grow">
+                <h2 className="text-2xl font-semibold text-gray-900">Upcoming Events</h2>
+                <div className="grid md:grid-cols-3 gap-6 flex-grow mt-2">
                     {events.map((event) => (
                         <EventCard key={event.id} event={event} />
                     ))}
@@ -186,7 +111,7 @@ const Home = () => {
 
             {/* Gallery Section */}
             <section className="w-full py-12">
-                <h2 className=" w-full text-2xl font-semibold text-gray-900 dark:text-white">Our Captured Moments</h2>
+                <h2 className=" w-full text-2xl font-semibold text-gray-900 mt-2">Our Captured Moments</h2>
                 <GalleryCarousel images={gallaryImages} />
             </section>
         </div>

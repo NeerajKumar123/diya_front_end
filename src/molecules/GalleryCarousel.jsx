@@ -21,11 +21,11 @@ const GalleryCarousel = ({images}) => {
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
-            <p className="text-white">
-              {img.name}
+            <p className="text-black">
+              {img.imageName}
             </p>
             <img
-              src={img.url}
+              src={img.imageUrl}
               alt={`Slide ${index + 1}`}
               className="w-full h-64 rounded-lg object-contain mt-3"
             />
