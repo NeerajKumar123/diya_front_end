@@ -1,8 +1,4 @@
 import React from "react";
-import bgImage from '../assets/test0.png';
-import Footer from "../molecules/Footer";
-
-
 const About = () => {
 
   return (
@@ -27,7 +23,7 @@ const About = () => {
       <div className="w-full  bg-gray-100 flex py-5">
         {/* Left Section - Text */}
         <div className="w-1/2 bg-gray-100 p-6">
-        <img src={bgImage} alt="Sample" className="w-full h-auto rounded-lg shadow-lg" />
+        <img src="https://yavuzceliker.github.io/sample-images/image-1.jpg" alt="Sample" className="w-full h-auto rounded-lg shadow-lg" />
           <span className="text-gray-700 font-semibold text-3xl">Our Mission</span>
           <p className="text-gray-800 text-justify leading-relaxed">
             NGO-Mission save and made a healthy Environment and natural resource management, Health & Nutrition, HIV/AIDS, Tuberculosis, and other Awareness Programmes under the health department as Immunisation, Malaria, Dengue, MR  campaign, JE Campaign.  Labour & Employment, Legal Awareness & Aid, Rural Development & Poverty Alleviation, Women Development & Empowerment.

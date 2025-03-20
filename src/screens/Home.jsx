@@ -5,19 +5,18 @@ import GalleryCarousel from "../molecules/GalleryCarousel";
 import EventCard from "../molecules/EventCard";
 import NewsCard from "../molecules/NewsCard";
 import { useNavigate } from "react-router-dom";
-import bgImage from "../assets/test0.png";
-import {fetchNews, fetchEvents,fetchGallary} from "../services/HttpRequests.jsx"
+import { fetchNews, fetchEvents, fetchGallary } from "../services/HttpRequests.jsx"
 
 const Home = () => {
 
-    const [news, setNews] = useState([]);   
+    const [news, setNews] = useState([]);
     const [events, setEvents] = useState([]);
     const [gallaryImages, setGallaryImages] = useState([]);
 
     useEffect(() => {
-      fetchNews().then(setNews);
-      fetchEvents().then(setEvents);
-      fetchGallary().then(setGallaryImages)
+        fetchNews().then(setNews);
+        fetchEvents().then(setEvents);
+        fetchGallary().then(setGallaryImages)
     }, [])
     const navigate = useNavigate();
 
@@ -39,9 +38,9 @@ const Home = () => {
     return (
         <div className="min-h-screen flex flex-col items-center text-center p-6 bg-gray-100">
             {/* Hero Section */}
+            
             <section
-                className="w-full py-12 bg-cover bg-center bg-no-repeat relative min-h-[33vh]"
-                style={{ backgroundImage: `url(${bgImage})` }}
+                className="w-full py-12 bg-cover bg-center bg-no-repeat relative min-h-[33vh] bg-[url('https://yavuzceliker.github.io/sample-images/image-1.jpg')]"
             >
                 <motion.h1
                     className="text-4xl font-bold text-gray-900 dark:text-white"

@@ -1,5 +1,4 @@
 
-import bgImage from '../assets/test0.png';
 import MapView from '../molecules/MapView';
 import ContactUsForm from "../molecules/ContactUsForm";
 
@@ -11,7 +10,7 @@ const Contact = () => {
         <ContactUsForm/>
         </div>
         <div className="w-1/2 p-4 text-white text-center">
-          <img src={bgImage} alt="Sample" className="w-full rounded-lg shadow-lg" />
+          <img src="https://yavuzceliker.github.io/sample-images/image-1.jpg" alt="Sample" className="w-full rounded-lg shadow-lg" />
         </div>
       </div>
       <p className="">
