@@ -1,4 +1,7 @@
 import React from "react";
+import Mission from "../molecules/Mission.jsx"
+
+const mission = `Save and made a healthy Environment and natural resource management <br/> Awareness programme for Health & Nutrition, HIV/AIDS, Tuberculosis, and other  as Immunization, Malaria, Dengue, MR campaign, JE Campaign etc.\nLabour & Employment, Legal Awareness programs for rural development.\nOrganize tree plantation programs to maintain balance in nature and atmosphere.\nOrganize skill development programs for Poverty Alleviation , Women Development & Empowerment.`
 const About = () => {
 
   return (
@@ -6,10 +9,14 @@ const About = () => {
       <div className="w-full bg-blue-700 min-h-20 flex justify-center">
         <h1 className="text-7xl text-center text-white font-bold"> Our Core Values</h1>
       </div>
-
       <p className="py-6 px-6 text-center">
-        Diya Samajik Sanstha (DSS) is a Society, registered under Societies
-        Registration Act by the Govt. of UP in the year 2011 and an NGO of NITI AAYOG, Govt of India. It aims awareness for poor and needy people for bringing them to main stream  society by providing Health, Education, training and basic needs especially for the development of children & women. Diya  worked also in the area of Environment and natural resource management, Health & Nutrition, HIV/AIDS ,Tuberculosis and  other Awareness  Programme under the health department as Immunisation, Malaria, Dengue , MR  campaign, JE Campaign.  Labour & Employment, Legal Awareness & Aid, Rural Development & Poverty Alleviation, Women Development & Empowerment, CSR Training Etc.
+        Diya Samajik Sanstha (DSS) is a non government organazation who registered under Societies Registration Act article-21,1860 UP.
+        registration no is 363(2011-2012)
+        A Niti Aayog ragestred NGO by Govt of India, unique id is UP/2019/0237470.
+        Our organization  Aims-
+        Awareness for poor and needy people for bringing them to main stream society by providing Health, Education, training and basic needs especially for the development of children & women.
+        Diya worked also in the area of Environment and natural resource management, Health & Nutrition, HIV/AIDS /Tuberculosis and other Awareness Programme under the health department as Immunization, Malaria, Dengue , MR campaign, JE Campaign.
+        Labour & Employment, Legal Awareness & Aid, Rural Development & Poverty Alleviation, Women Development & empowerment, CSR training etc.
         The NGO works towards the promotion of sustainable development.
       </p>
 
@@ -20,40 +27,46 @@ const About = () => {
         </h1>
       </div>
 
-      <div className="w-full  bg-gray-100 flex py-5">
-        {/* Left Section - Text */}
-        <div className="w-1/2 bg-gray-100 p-6">
-        <img src="https://yavuzceliker.github.io/sample-images/image-1.jpg" alt="Sample" className="w-full h-auto rounded-lg shadow-lg" />
-          <span className="text-gray-700 font-semibold text-3xl">Our Mission</span>
-          <p className="text-gray-800 text-justify leading-relaxed">
-            NGO-Mission save and made a healthy Environment and natural resource management, Health & Nutrition, HIV/AIDS, Tuberculosis, and other Awareness Programmes under the health department as Immunisation, Malaria, Dengue, MR  campaign, JE Campaign.  Labour & Employment, Legal Awareness & Aid, Rural Development & Poverty Alleviation, Women Development & Empowerment.
-          </p>
-        </div>
-
-        {/* Right Section - Image */}
-        <div className="w-1/2 bg-gray-100 flex justify-center items-center">
-          <img src="src/assets/test.png" alt="NGO Work" className="w-3/4 h-auto object-cover" />
-        </div>
+      <div className="w-full bg-green-500 min-h-20 flex justify-center mt-4">
+        <h1 className="text-7xl text-center text-white font-bold"> Our Mission</h1>
+      </div>
+      <div className=" w-full">
+        <p className=" w-full text-center">
+          . Save and made a healthy Environment and natural resource management.
+        </p>
+        <p className=" w-full text-center">
+          . Awareness programme for Health & Nutrition, HIV/AIDS, Tuberculosis, and other  as Immunization, Malaria, Dengue, MR campaign, JE Campaign etc.
+        </p>
+        <p className=" w-full text-center">
+          . Labour & Employment, Legal Awareness programs for rural development .
+        </p>
+        <p className=" w-full text-center">
+          . Organize tree plantation programs to maintain balance in nature and atmosphere.
+        </p>
+        <p className=" w-full text-center">
+          . Organize skill development programs for Poverty Alleviation , Women Development & Empowerment.
+        </p>
       </div>
 
-
-      <div className="w-full bg-red-500 flex">
-        {/* Left Section - Text */}
-        <div className="w-1/2 bg-gray-100 flex justify-center items-center">
-          <img src="src/assets/test.png" alt="NGO Work" className="w-3/4 h-auto object-cover" />
-        </div>
-
-
-        {/* Right Section - Image */}
-        <div className="w-1/2 bg-gray-100 p-6">
-          <span className="text-gray-700 font-semibold text-3xl">Our Vision</span>
-          <p className="text-gray-800 text-justify leading-relaxed">
-            Clean environment(Clear Air, Clean Water, Clean)
-            Women Empowerment keeping in mind "Hunar hai to Kadra hai".
-          </p>
-        </div>
+      <div className="w-full bg-amber-300 min-h-20 flex justify-center mt-4">
+        <h1 className="text-7xl text-center text-white font-bold"> Our Vision</h1>
+      </div>
+      <div className="w-full">
+        <p className=" w-full text-center">
+          . To help ensure a healthy environment for current and future generations.
+        </p>
+        <p className="w-full text-center">
+          . Tree plantation is very important for our life.
+        </p>
+        <p className=" w-full text-center">
+          . Seekho aur Atamnirbhar bano.
+        </p>
+        <p className=" w-full text-center">
+          .Hunar hai to Kadar hai.
+        </p>
       </div>
 
+      
     </div>
   )
 
