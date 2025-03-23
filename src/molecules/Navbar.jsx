@@ -27,14 +27,14 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-0 w-full bg-orange-400 text-white p-4 z-50 flex justify-between items-center">
+    <nav className="sticky top-0 w-full bg-[#F8ED8C] text-white p-4 z-50 flex justify-between items-center">
       <HomeIcon/>
       <ul className="flex gap-6">
         {navLinks.map(({ path, label }) => (
           <li key={path}>
             <Link
               to={path}
-              className={`text-white text-lg ${
+              className={`text-[#261FB3] text-lg ${
                 location.pathname === path ? "font-semibold underline" : ""
               }`}
             >

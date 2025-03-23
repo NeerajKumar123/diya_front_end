@@ -11,7 +11,7 @@ const OurEvents = () => {
     }, []);
 
   return (
-    <div className="flex flex-col min-h-screen px-6">
+    <div className="flex flex-col min-h-screen px-6 bg-[#16C47F]">
       <h1 className="text-3xl font-bold text-center my-6">Upcoming Events</h1>
       <div className="grid md:grid-cols-3 gap-6 flex-grow">
         {events.map((event) => (

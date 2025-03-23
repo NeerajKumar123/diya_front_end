@@ -6,6 +6,7 @@ import EventCard from "../molecules/EventCard";
 import NewsCard from "../molecules/NewsCard";
 import { useNavigate } from "react-router-dom";
 import { fetchNews, fetchEvents, fetchGallary } from "../services/HttpRequests.jsx"
+import Loading from "../molecules/Loading.jsx";
 
 const Home = () => {
 
@@ -36,23 +37,21 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center text-center p-6 bg-gray-100">
+        <div className="min-h-screen flex flex-col items-center text-center p-6 bg-[#16C47F]">
             {/* Hero Section */}
-            
             <section
-                className="w-full py-12 bg-cover bg-center bg-no-repeat relative min-h-[33vh] bg-[url('https://yavuzceliker.github.io/sample-images/image-1.jpg')]"
+                className="w-full py-12 bg-cover bg-center bg-no-repeat relative min-h-[75vh] bg-[url('https://res.cloudinary.com/dc1hi8sjj/image/upload/v1742451861/plant8_g5niqx.jpg')]"
             >
-                <motion.h1
-                    className="text-4xl font-bold text-gray-900 dark:text-white"
+                {/* <motion.h1
+                    className="text-4xl font-bold bg-gray-200 text-[#16C47F] bg-opacity-10 rounded-2xl "
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     Helping Society to be skilled and self-dependent
-                </motion.h1>
-
+                </motion.h1> */}
                 <motion.div
-                    className="mt-6 flex gap-4 justify-center"
+                    className="mt-50 flex gap-4 justify-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5 }}
@@ -91,27 +90,32 @@ const Home = () => {
             {/* News Section */}
             <section className="w-full py-12">
                 <h2 className="text-2xl font-semibold text-gray-900">Latest News</h2>
-                <div className="grid md:grid-cols-3 gap-6 mt-2">
-                    {news.map((article) => (
-                        <NewsCard key={article.id} article={article} />
-                    ))}
-                </div>
+                {news?.length ?
+                    <div className="grid md:grid-cols-3 gap-6 mt-2">
+                        {news.map((article) => (
+                            <NewsCard key={article.id} article={article} />
+                        ))}
+                    </div> :
+                    <Loading />}
             </section>
 
             {/* Upcoming Events Section */}
             <section className="w-full py-12">
                 <h2 className="text-2xl font-semibold text-gray-900">Upcoming Events</h2>
-                <div className="grid md:grid-cols-3 gap-6 flex-grow mt-2">
-                    {events.map((event) => (
-                        <EventCard key={event.id} event={event} />
-                    ))}
-                </div>
+                {events?.length ?
+                    <div className="grid md:grid-cols-3 gap-6 flex-grow mt-2">
+                        {events.map((event) => (
+                            <EventCard key={event.id} event={event} />
+                        ))}
+                    </div> :
+                    <Loading loaderDesc={"Loading events..."} />
+                }
             </section>
-
             {/* Gallery Section */}
             <section className="w-full py-12">
                 <h2 className=" w-full text-2xl font-semibold text-gray-900 mt-2">Our Captured Moments</h2>
-                <GalleryCarousel images={gallaryImages} />
+                {gallaryImages?.length ? <GalleryCarousel images={gallaryImages} /> : <Loading />
+                }
             </section>
         </div>
     );

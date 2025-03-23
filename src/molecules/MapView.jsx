@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 const MapView = () => {
-  const position = [28.6139, 77.2090]; // Replace with your address's latitude & longitude
+  const position = [29.468988, 77.730961]; // Replace with your address's latitude & longitude
 
   return (
     <div className="w-full h-96 mt-6">
