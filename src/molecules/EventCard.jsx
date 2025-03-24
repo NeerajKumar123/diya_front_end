@@ -1,7 +1,6 @@
 import React from "react";
 
 const EventCard = ({ event }) => {
-    console.log("event",event)
     const openMap = () => {
         const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.venue)}`;
         window.open(googleMapsUrl, "_blank");

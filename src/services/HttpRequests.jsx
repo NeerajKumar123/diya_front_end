@@ -16,7 +16,6 @@ export const fetchEvents = async () => {
     const rows = text.split("\n").slice(1); // Header hata diya    
     return rows.map(row => {
       const columns = row.split(",");
-      console.log("columns",columns)
 
       return {
         id: columns[0],
