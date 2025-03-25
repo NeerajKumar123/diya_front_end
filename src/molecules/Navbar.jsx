@@ -14,7 +14,7 @@ const HomeIcon = () => {
   return (
     <Link to="/">
       <img
-        src="/diya.svg"  // Public folder ka direct path
+        src="/diya.svg"  
         alt="Home"
         className="w-12 h-12 cursor-pointer hover:opacity-80"
       />
