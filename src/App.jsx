@@ -7,6 +7,7 @@ import SupportUs from "./screens/SupportUs";
 import News from "./screens/News";
 import Contact from "./screens/Contact";
 import Navbar from "./molecules/Navbar";
+import SocialBar from "./molecules/SocialBar";
 import Footer from "./molecules/Footer";
 import OurEvents from "./screens/OurEvents";
 import NewsDetail from "./screens/NewsDetail";
@@ -17,6 +18,7 @@ function App() {
     <Router>
       {/* Navbar ko bhi ThemeContext ka access milega */}
       <Navbar />
+      <SocialBar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

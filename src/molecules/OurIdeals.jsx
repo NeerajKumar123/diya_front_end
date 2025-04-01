@@ -16,18 +16,18 @@ const OurIdeals = () => {
   const data = [
     {
       image: "https://res.cloudinary.com/dc1hi8sjj/image/upload/v1742915715/WhatsApp_Image_2025-03-25_at_8.34.42_PM_lwntek.jpg",
-      title: "Dr. RD Gaud",
-      description: "प्रभारी चिकित्सा अधिकारी,पीसीएच, सिकंदरपुर, मोरना(मुजफ्फरनगर)"
+      title: "Dr. RD Gaur",
+      description: "Senior Medical Officer"
     },
     {
       image: "https://res.cloudinary.com/dc1hi8sjj/image/upload/v1742915594/WhatsApp_Image_2025-03-25_at_8.42.28_PM_trexgi.jpg",
-      title: "Mr. Sanjiv Malik",
-      description: "वरिष्ठ सामाजिक कार्यकर्ता"
+      title: "Mr. Sajeev Malik(Masoom)",
+      description: " Senior Social Activist"
     },
     {
       image: "https://res.cloudinary.com/dc1hi8sjj/image/upload/v1742916144/WhatsApp_Image_2025-03-25_at_8.48.29_PM_mlhcgn.jpg",
       title: "Mr. Kanwarpal Prajapati",
-      description: "संचालक, महर्षि प्रजापति समिति शुक्रताल, मुजफ्फरनगर व वरिष्ठ सामाजिक कार्यकर्ता "
+      description: "Gaurdian, Maharishi Prajapati Shiksha Samiti, Shukratal, Muzaffarnagar"
     }
     // {
     //   image: "https://yavuzceliker.github.io/sample-images/image-1.jpg",

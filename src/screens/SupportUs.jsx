@@ -7,7 +7,7 @@ const SupportUs = () => {
       </div>
 
       <p className="py-6 px-6 text-center">
-        To run this organisation and to help the society, we need support.
+        To run this organization and to help the society, we need support.
       </p>
       <div className="  text-white text-center">
         <img src="https://res.cloudinary.com/dc1hi8sjj/image/upload/v1742451865/WhatsApp_Image_2025-03-20_at_7.34.10_AM_dcq6a2.jpg" alt="Sample" className="w-full h-auto rounded-lg shadow-lg" />
