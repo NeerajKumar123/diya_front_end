@@ -7,16 +7,16 @@ const SocialBar = () => {
         {/* Right-aligned social icons using images */}
         <div className="flex space-x-4">
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <img src="src\assets\fb.svg" alt="Facebook" className="w-5 h-5" />
+            <img src="/fb.svg" alt="Facebook" className="w-5 h-5" />
           </a> 
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <img src="src\assets\twitter.svg" alt="Twitter" className="w-5 h-5" />
+            <img src="/twitter.svg" alt="Twitter" className="w-5 h-5" />
           </a>
           <a href="https://www.youtube.com/@diyasamajiksanstha3883/featured" target="_blank" rel="noopener noreferrer">
-            <img src="src\assets\youtube.svg" alt="YouTube" className="w-5 h-5" />
+            <img src="/youtube.svg" alt="YouTube" className="w-5 h-5" />
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src="src\assets\linkedin.svg" alt="YouTube" className="w-5 h-5" />
+            <img src="/linkedin.svg" alt="YouTube" className="w-5 h-5" />
           </a>
         </div>
       </div>
