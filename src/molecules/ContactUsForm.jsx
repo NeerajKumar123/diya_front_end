@@ -2,6 +2,8 @@ import { useState } from "react";
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbww_tEhVzKLtZEWTce_dx9TYrDAmrDj_Wz2HkgvHJnIIQ4Ji38-qjqTFKlWA3EpkuoRnw/exec"
 
 function ContactForm() {
+    console.log("test console...");
+    
     const [formData, setFormData] = useState({
         fullName: "",
         mobile: "",
