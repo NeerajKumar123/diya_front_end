@@ -7,6 +7,7 @@ import NewsCard from "../molecules/NewsCard";
 import { useNavigate } from "react-router-dom";
 import { fetchNews, fetchEvents, fetchGallary } from "../services/HttpRequests.jsx"
 import Loading from "../molecules/Loading.jsx";
+import OurIdeals from "../molecules/OurIdeals.jsx";
 
 const Home = () => {
 
@@ -86,6 +87,8 @@ const Home = () => {
                     </motion.div>
                 ))}
             </section>
+            <h1 className="text-4xl font-semibold mb-2 text-white">Our Ideals</h1>
+            <OurIdeals/>
 
             {/* News Section */}
             <section className="w-full py-12">

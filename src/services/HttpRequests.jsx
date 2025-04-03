@@ -61,7 +61,7 @@ export const fetchEvents = async () => {
     return rows.map(row => {
       const columns = row.split(",");  
       return {
-        imageName: columns[0],
+        imageName: columns[0].replaceAll(/comma/g, ','),
         imageUrl: columns[1]
            };
     });

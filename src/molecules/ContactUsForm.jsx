@@ -1,6 +1,9 @@
 import { useState } from "react";
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbww_tEhVzKLtZEWTce_dx9TYrDAmrDj_Wz2HkgvHJnIIQ4Ji38-qjqTFKlWA3EpkuoRnw/exec"
 
 function ContactForm() {
+    console.log("test console...");
+    
     const [formData, setFormData] = useState({
         fullName: "",
         mobile: "",
@@ -31,7 +34,7 @@ function ContactForm() {
         setError("");
         try {
             const response = await fetch(
-                "https://script.google.com/macros/s/AKfycbwB7wqJNALTGKFva3QK_w0h57f118AAN77dBOr78ye_-jm8N8ISQdfgrOvRT0FnL8Va/exec", // Replace with your actual URL
+                SHEET_URL, // Replace with your actual URL
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -39,9 +42,12 @@ function ContactForm() {
                     mode: "no-cors"
                 }
             );
+            console.log("response",response)
             setSuccess(true);
             setFormData({ fullName: "", mobile: "", email: "" });
         } catch (err) {
+            console.log("err",err)
+
             setError("Network error. Please try again.");
         }
     };
