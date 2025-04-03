@@ -14,9 +14,9 @@ const HomeIcon = () => {
   return (
     <Link to="/">
       <img
-        src="/diya.svg"  
+        src="/LogoDiya.png"  
         alt="Home"
-        className="w-12 h-12 cursor-pointer hover:opacity-80"
+        className="w-12 h-12 cursor-pointer hover:opacity-80 "
       />
     </Link>
   );
@@ -27,7 +27,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-0 w-full bg-[#F8ED8C] text-white p-4 z-50 flex justify-between items-center">
+    <nav className="sticky top-0 w-full bg-[#F8ED8C] text-white p-2 z-50 flex justify-between items-center">
       <HomeIcon/>
       <ul className="flex gap-6">
         {navLinks.map(({ path, label }) => (
